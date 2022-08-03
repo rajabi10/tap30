@@ -11,6 +11,8 @@
 /* root variables */
 :root{
     --color-primary: #ff5722;
+    --color-badge-primary: #FE4E00;
+    --color-card-primary: #FF7A50;
     --color-secondary-light: #fff6f2  ;
     --color-secondary-dark: #ffa589 ; 
     --color-navbar: #f8f8f8;
@@ -95,16 +97,16 @@ h2{
 .badge{
     display: inline-block;
     border-radius: 32px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1.5rem;
     background-color: var(--color-secondary-light);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    color: var(--color-badge-primary);
+    border: 2px solid var(--color-badge-primary);
     text-transform: uppercase;
     font-size: 1.2rem;
 }
 
 .badge--primary{
-    background-color:var(--color-primary);
+    background-color:var(--color-badge-primary);
     color: var(--color-white);
 }
 
@@ -136,4 +138,69 @@ h2{
         font-size: 1.8rem;
         margin-bottom: 2rem;
     }
+}
+
+/* plan section */
+.block-plan{
+    display: grid;
+    gap: 2rem 3rem;
+    margin-top: 2rem;
+}
+
+.plan{
+    max-width: 500px;
+    font-size: 1.8rem;
+}
+
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 10px #dfdede;
+}
+
+.card__header, 
+.card__body{
+    padding: 3rem 2.5rem;
+}
+
+.card__header{
+    color: var(--color-white);
+}
+
+.card__body{
+    background-color:var(--color-secondary-light);
+}
+
+.card--secondary .card__header{
+    background-color: var(--color-secondary-dark);
+}
+
+.card--primary .card__header{
+    background-color:var(--color-card-primary);
+}
+
+.plan__introduction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.plan__price{
+    font-size: 3rem;
+}
+
+.plan__billings-cycle{
+    font-size: 1.4rem;
+}
+
+.plan__description{
+    display: block;
+    margin-top: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+    .block-plan{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
 }
