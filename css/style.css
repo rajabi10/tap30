@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    list-style: none;
+    /* list-style: none; */
 }
 
 /* root variables */
@@ -111,5 +111,29 @@ h2{
 @media screen and (min-width: 1024px) {
     .badge{
         font-size: 1.4rem;
+    }
+}
+
+/* List */
+.list{
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.list--inline .list__item{
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.list--tick .list__item{
+    background: url(../assets/image/Tick-Square.svg) no-repeat right center;
+    padding-right: 3rem; 
+    margin-bottom: 1.5rem; 
+}
+
+@media screen and (min-width: 1024px) {
+    .list--tick .list__item{
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
 }
