@@ -28,6 +28,7 @@ html{
 body{
     color: var(--color-body);
     font-size: 1.4rem;
+    line-height: 1.7;
 }
 
 h1,h2,h3{
@@ -41,6 +42,7 @@ h1{
 
 h2{
     font-size: 2.2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* every 10px is 1rem */
@@ -53,6 +55,7 @@ h2{
     }
     h2{
         font-size: 3.5rem;
+        margin-bottom: 3.5rem;
     }
 }
 
@@ -81,6 +84,11 @@ h2{
 
 .btn--block{
     width: 100%;
+    font-size: 1.6rem;
+}
+
+.plan .btn--block{
+    margin-top: 10rem;
     font-size: 1.6rem;
 }
 
@@ -143,13 +151,15 @@ h2{
 /* plan section */
 .block-plan{
     display: grid;
-    gap: 2rem 3rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px,320px));
+    justify-content: center;
+    gap: 10rem 6rem;
+    margin-top: 5rem;
 }
 
 .plan{
-    max-width: 500px;
     font-size: 1.8rem;
+    transition: all 0.2s ease-out;
 }
 
 .card{
@@ -198,9 +208,85 @@ h2{
     display: block;
     margin-top: 1.5rem;
 }
+
+.plan--popular{
+    transform: scale(1.1);
+}
+
+.plan--popular:hover{
+    transform: scale(1.15);
+}
+
+.plan:hover{
+    transform: scale(1.05);
+}
+
 @media screen and (min-width: 1024px) {
-    .block-plan{
-        grid-template-columns: repeat(3, 1fr);
+    .plan .btn--block{
+        font-size: 1.8rem;
     }
-    
+}
+
+/* container */
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* feature */
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between
+}
+
+.feature__text{
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.feature .btn{
+    justify-content: center;
+    padding: 1.2rem 3rem;
+}
+
+.feature__image > img{
+    margin-right: 5rem;
+    width: 70%;
+    height: auto;
+}
+
+.feature__link{
+    margin: 1.5rem 0;
+    display: flex;
+}
+
+.feature__link a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.feature__link img{
+    margin-bottom: -0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+   .row {
+    display: flex;
+     flex-direction: row-reverse;
+   } 
+   .row--reverse{
+    display: flex;
+    flex-direction: row;
+   }
+   .row--reverse .feature__image {
+    margin-left: 10%;
+    }
+    .row--reverse .feature__image > img{
+    width: 450px;
+    }
+    .row .feature__image > img{
+        width: 450px;
+    }
 }
