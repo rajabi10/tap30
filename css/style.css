@@ -302,13 +302,24 @@ h2{
     display: none;
 }
 
+.contact-us__icons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-us__icons .icon-holder{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
 @media screen and (min-width:1024px) {
     .contact-us{
         grid-template-areas: 
-        "icons form"
         "address form"
         "map form"
-        ;
+        "icons form";
         grid-template-columns: 70fr 30fr ;
     }
     .contact-us__form{
@@ -318,10 +329,10 @@ h2{
         grid-area: map;
         display: block;
     }
-    .contact-us__address{
+    .contact-us__icons{
         grid-area: address;
     }
-    .contact-us__icons{
+    .contact-us__social{
         grid-area: icons;
     }
 }
@@ -341,4 +352,24 @@ h2{
     background-color: #f6f6f6;
     border-radius: 100%;
     cursor: pointer;
+}
+
+.icon-holder__label{
+    margin-left: 1.5rem;
+    display: block;
+}
+
+@media screen and (min-width:1024px) {
+    .contact-us__icons{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-us__icons .icon-holder{
+        flex-direction: column;
+    }
+    .icon-holder__label{
+        order: 2;
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
 }
