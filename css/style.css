@@ -235,6 +235,7 @@ h2{
 
 /* feature */
 .feature{
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
