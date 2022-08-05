@@ -308,12 +308,6 @@ h2{
     align-items: flex-end;
 }
 
-.contact-us__icons .icon-holder{
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
 @media screen and (min-width:1024px) {
     .contact-us{
         grid-template-areas: 
@@ -352,6 +346,12 @@ h2{
     background-color: #f6f6f6;
     border-radius: 100%;
     cursor: pointer;
+}
+
+.contact-us__icons .icon-holder{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .icon-holder__label{
