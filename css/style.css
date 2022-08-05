@@ -291,3 +291,54 @@ h2{
         width: 450px;
     }
 }
+
+/* contact-us */
+
+.contact-us{
+    display: grid;
+}
+
+.contact-us__map{
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .contact-us{
+        grid-template-areas: 
+        "icons form"
+        "address form"
+        "map form"
+        ;
+        grid-template-columns: 70fr 30fr ;
+    }
+    .contact-us__form{
+        grid-area: form;
+    }
+    .contact-us__map{
+        grid-area: map;
+        display: block;
+    }
+    .contact-us__address{
+        grid-area: address;
+    }
+    .contact-us__icons{
+        grid-area: icons;
+    }
+}
+
+/* icons */
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.icon-container{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 100%;
+    cursor: pointer;
+}
