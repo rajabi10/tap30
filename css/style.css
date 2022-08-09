@@ -612,6 +612,16 @@ textarea{
     display: flex;
     flex-direction: column;
     font-size: 1.4rem;
+    /* for control the hieght of the list for the hamburger menu we use max-hieght and overflow and opacity */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.nav.nav__expanded .nav__list{
+    max-height: 100vh;
+    opacity: 1;
 }
 
 .nav__item{
@@ -635,6 +645,10 @@ textarea{
     background-color: gold;
 }
 
+.nav__item.cta {
+    font-size: 1.4;
+    border: 0;
+}
 .nav__item.cta > a{
     font-size: 1.4rem;
     color: var(--color-navbar);
@@ -652,6 +666,8 @@ textarea{
         flex-direction: row;
         align-items: center;
         width: auto;
+        opacity: 1;
+        max-height: 100%;
     }
     .nav__item{
         margin-right: 2rem;
