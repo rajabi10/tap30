@@ -593,3 +593,65 @@ textarea{
         margin-left: -1rem;
     }
 }
+
+/* Navbar */
+.main-header{
+    background-color:var(--color-navbar);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.nav-link-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.4rem;
+}
+
+.nav__item{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav__item > a{
+    text-decoration: none;
+    color: #545454;
+    /* for better UI we styled <a> with block and pb cuz user be able to click the whole area not just text */
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.nav__item > a:hover{
+    color: var(--color-primary);
+    padding-bottom: 1rem;
+}
+.nav__toggler{
+    background-color: gold;
+}
+
+.nav-link-container > button{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-link-container{
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
+    .nav__item{
+        margin-left: 2rem;
+        font-size: 1.6rem;
+        border: 0;
+    }
+    .nav__toggler{
+        display: none;
+    }
+    
+}
