@@ -709,6 +709,113 @@ textarea {
 }
 
 .nav.nav__expanded .bar-three {
-  transform: rotate(45deg)  translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
   margin: 8px 0;
+}
+
+/* hero section */
+.hero-section {
+  width: 100%;
+  height: 478px;
+}
+
+.hero-section img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 478px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-btn {
+  background-image: linear-gradient(
+    51deg,
+    rgba(23, 26, 60, 0.7) 5%,
+    rgba(23, 26, 60, 0.3) 95%
+  );
+  padding: 16px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+}
+
+.intro-btn h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.intro-btn h2 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.intro-btn__passenger {
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 12px;
+  width: 220px;
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.intro-btn__passenger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.intro-btn__passenger p {
+  font-size: 1.4rem;
+}
+
+.intro-btn__passenger .icon {
+  position: absolute;
+  right: 1.1rem;
+}
+.intro-btn__passenger .icon-svg{
+  position: absolute;
+  right: 0.4rem;
+  top: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-wrapper {
+    justify-content: flex-start;
+  }
+  .intro-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .intro-btn {
+    width: 530px;
+    padding: 25px;
+    border-radius: 20px;
+  }
+  .intro-btn h1 {
+    font-size: 5rem;
+  }
+  .intro-btn h2 {
+    font-size: 2.5rem;
+  }
+  .intro-btn__passenger p{
+    font-size: 1.4rem;
+  }
 }
