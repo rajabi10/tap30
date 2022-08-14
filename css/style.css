@@ -728,6 +728,7 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
+  right: -4rem;
   width: 100%;
   height: 478px;
   display: flex;
@@ -789,10 +790,37 @@ textarea {
   position: absolute;
   right: 1.1rem;
 }
-.intro-btn__passenger .icon-svg{
+.intro-btn__passenger .icon-svg {
   position: absolute;
   right: 0.4rem;
   top: 1.2rem;
+}
+
+.intro-wrapper .app__driver {
+  background-image: linear-gradient(
+    51deg,
+    rgba(23, 26, 60, 0.7) 5%,
+    rgba(23, 26, 60, 0.3) 95%
+  );
+  background-color: transparent;
+  color: var(--color-navbar);
+  border: 1px solid var(--color-navbar);
+}
+
+.intro-wrapper .sign__driver {
+  background-image: linear-gradient(
+    51deg,
+    rgba(23, 26, 60, 0.7) 5%,
+    rgba(23, 26, 60, 0.3) 95%
+  );
+  background-color: transparent;
+  color: var(--color-navbar);
+  border: 1px solid var(--color-navbar);
+}
+
+.intro-wrapper .sign__driver p {
+  position: relative;
+  right: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -815,7 +843,7 @@ textarea {
   .intro-btn h2 {
     font-size: 2.5rem;
   }
-  .intro-btn__passenger p{
+  .intro-btn__passenger p {
     font-size: 1.4rem;
   }
 }
