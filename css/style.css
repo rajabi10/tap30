@@ -159,6 +159,11 @@ h2 {
   margin-top: 5rem;
 }
 
+.block__heading{
+  text-align: center;
+  margin-bottom: -1rem;
+}
+
 .plan {
   font-size: 1.8rem;
   transition: all 0.2s ease-out;
@@ -224,6 +229,10 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
+  .block__heading{
+    text-align: center;
+    margin-bottom: 8rem;
+  }
   .plan .btn--block {
     font-size: 1.8rem;
   }
@@ -254,9 +263,18 @@ h2 {
   padding: 1.2rem 3rem;
 }
 
+.feature.row .feature__image {
+  margin-right: 4rem;
+  margin-bottom: 4rem;
+}
+
+.feature.row--reverse .feature__image {
+  margin-left: 6rem;
+  margin-bottom: 4rem;
+}
 .feature__image > img {
   margin-right: 5rem;
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
@@ -278,13 +296,15 @@ h2 {
   .row {
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 1rem;
   }
   .row--reverse {
     display: flex;
     flex-direction: row;
   }
-  .row--reverse .feature__image {
-    margin-left: 10%;
+  .feature.row--reverse .feature__image {
+    position: relative;
+    right: -7rem;
   }
   .row--reverse .feature__image > img {
     width: 450px;
@@ -310,6 +330,11 @@ h2 {
   align-items: flex-end;
 }
 
+.block__heading-contact{
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 @media screen and (min-width: 1024px) {
   .contact-us {
     grid-template-areas:
@@ -330,6 +355,9 @@ h2 {
   }
   .contact-us__social {
     grid-area: icons;
+  }
+  .block__heading-contact{
+    margin-bottom: 2rem;
   }
 }
 
@@ -645,9 +673,6 @@ textarea {
   color: var(--color-primary);
   padding-bottom: 1rem;
 }
-.nav__toggler {
-  background-color: gold;
-}
 
 .nav__item.cta {
   font-size: 1.4;
@@ -719,9 +744,9 @@ textarea {
   height: 478px;
 }
 
-.hero-section img {
+.hero-section .banner-img {
   width: 100%;
-  height: auto;
+  height: 478px;
 }
 
 .hero-wrapper {
@@ -742,6 +767,9 @@ textarea {
     rgba(23, 26, 60, 0.7) 5%,
     rgba(23, 26, 60, 0.3) 95%
   );
+  position: absolute;
+  top: 8rem;
+  right: 9rem;
   padding: 16px;
   border-radius: 20px;
   display: flex;
@@ -823,9 +851,18 @@ textarea {
   right: 2rem;
 }
 
+.banner-phone {
+  display: none;
+  position: absolute;
+  bottom: -20%;
+  height: 100%;
+  left: 10%;
+}
+
 @media screen and (min-width: 768px) {
   .hero-wrapper {
     justify-content: flex-start;
+    right: 0;
   }
   .intro-wrapper {
     flex-direction: row;
@@ -833,18 +870,27 @@ textarea {
     align-items: center;
   }
   .intro-btn {
-    width: 530px;
-    padding: 25px;
+    position: absolute;
+    top: 20rem;
+    right: 3rem;
+    width: 500px;
+    max-width: 500px;
+    padding: 0 25px;
     border-radius: 20px;
+    align-items: flex-start;
   }
   .intro-btn h1 {
     font-size: 5rem;
   }
   .intro-btn h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 400;
   }
   .intro-btn__passenger p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  .banner-phone {
+    display: block;
   }
 }
 
@@ -926,6 +972,11 @@ textarea {
 }
 
 @media screen and (min-width: 1024px) {
+  .services {
+    margin-top: 20rem;
+    border-bottom: 1px solid #dddd;
+    margin-bottom: 10rem;
+  }
   .services__tabs .tab > p {
     margin-top: 1rem;
     font-size: 1.4rem;
@@ -948,5 +999,16 @@ textarea {
   }
   .services .feature__image img {
     width: 100%;
+  }
+}
+
+/* padding */
+.block {
+  padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    padding: 6rem 2rem;
   }
 }
