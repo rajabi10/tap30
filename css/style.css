@@ -318,6 +318,7 @@ h2 {
 
 .contact-us {
   display: grid;
+  justify-content: center; 
 }
 
 .contact-us__map {
