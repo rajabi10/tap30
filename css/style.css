@@ -1086,6 +1086,42 @@ textarea {
   margin: 0 0.2rem;
 }
 
+/* Accordion */
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__heading {
+  margin-bottom: 0;
+}
+
+.accordion__content {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.accordion__expanded .accordion__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.accordion__header i {
+  color: var(--color-primary);
+  font-size: 2rem;
+  transition: all 0.3s ease-out;
+}
+
+.accordion__expanded .accordion__header i{
+  transform: rotate(-90deg);
+}
+
 /* padding */
 .block {
   padding: 4rem 2rem;
