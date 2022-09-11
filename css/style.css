@@ -1016,10 +1016,12 @@ textarea {
   overflow-x: auto;
   padding-bottom: 1.5rem;
 }
+
 .travel__slides::-webkit-scrollbar {
   display: none;
   width: 1px;
 }
+
 .travel__slide {
   display: flex;
   flex-direction: column;
@@ -1091,16 +1093,24 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  padding: 2rem 2rem;
+  border-bottom: 2px solid #ececec;
 }
 
 .accordion__heading {
   margin-bottom: 0;
+  color: #3a3a3a;
+  font-size: 1.8rem;
 }
 
 .accordion__content {
-  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion__content {
   border-radius: 5px;
-  padding: 1rem 2rem;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -1110,16 +1120,86 @@ textarea {
 .accordion__expanded .accordion__content {
   max-height: 100vh;
   opacity: 1;
+  padding: 1rem 2.5rem;
 }
 
 .accordion__header i {
   color: var(--color-primary);
-  font-size: 2rem;
+  font-size: 20px;
+  transform: rotate(-);
   transition: all 0.3s ease-out;
 }
 
-.accordion__expanded .accordion__header i{
+.accordion__expanded .accordion__header i {
   transform: rotate(-90deg);
+}
+
+.accondion-wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #ececec;
+  box-shadow: 0 9px 12px rgba(0, 0, 0, 0.05);
+}
+
+.accordion__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  border-bottom: 2px solid #ececec;
+  color: var(--color-primary);
+}
+
+.accordion__content img {
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+.accordion__content__detail {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 0;
+  color: #878787;
+  border-bottom: 2px solid #ececec;
+}
+
+.content__detail__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__detail__title span {
+  font-size: 1.5rem;
+}
+
+.content__detail {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content__detail h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content__detail h3 {
+  font-size: 1.8rem;
+  color: #878787;
+}
+
+.content__detail p {
+  font-size: 1.5rem;
+  color: #878787;
+}
+
+.accordion__content .edit {
+  color: var(--color-primary);
 }
 
 /* padding */
