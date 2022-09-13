@@ -19,6 +19,7 @@
   --color-headings: #000;
   --color-body: #333;
   --color-white: #ffff;
+  --avatar-size: 50px;
 }
 
 html {
@@ -1051,7 +1052,7 @@ textarea {
   border-radius: 32px;
   padding: 1rem 2rem;
   transform: translateY(-60px);
-  width: 80%;
+  width: 90%;
 }
 
 .slide__header {
@@ -1073,7 +1074,7 @@ textarea {
 .slide__detail .slide__title {
   font-size: 1.4rem;
   font-weight: 700;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .slide__detail .slide__icons {
@@ -1202,6 +1203,51 @@ textarea {
   color: var(--color-primary);
 }
 
+/* AVATAR */
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-group .avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border: 3px solid white;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: -15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.avatar:hover:not(:last-of-type) {
+  transform: translate(10px);
+}
+
+.avatar-group .avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden-avatars {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slide__suggest{
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-right: 10px;
+  display: inline-block;
+}
 /* padding */
 .block {
   padding: 4rem 2rem;
